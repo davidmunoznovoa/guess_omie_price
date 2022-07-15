@@ -1,5 +1,7 @@
 # guess_omie_price
-:hammer:
+
+:snake: :zap: :moneybag:
+
 ![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3-app.yml/badge.svg)
 ![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3-app.yml)
 
