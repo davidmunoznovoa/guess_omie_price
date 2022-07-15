@@ -1,2 +1,6 @@
 # guess_omie_price
-Library to try to guess the price of energy for future dates, based on different heuristics
+:hammer:
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3-app.yml/badge.svg)
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3-app.yml)
+
+- Herramienta para tratar de predecir el precio de mercado de OMIE a futuros.
