@@ -28,3 +28,27 @@ with description('MAJ'):
             prices = download_maj_on_date(d)
             assert len(prices) == 0
             assert prices == []
+
+        with it('Downloads prices for specified zone (Spain by default)'):
+            d = datetime(2022, 7, 14)
+            prices = download_maj_on_date(d)
+            assert len(prices) == 24
+
+            expected_prices = [165.74, 180.94, 192.07, 207.18, 214.79, 214.58, 205.78, 186.97,
+                               168.04, 146.76, 133.99, 125.60, 120.88, 118.01, 116.47, 115.88,
+                               112.92, 113.50, 117.78, 123.37, 132.55, 138.14, 138.36, 153.22]
+
+            res_prices = [x['value'] for x in prices]
+
+            assert res_prices == expected_prices
+
+            prices = download_maj_on_date(d, zone='pt')
+            assert len(prices) == 24
+
+            expected_prices = [165.74, 180.94, 192.07, 207.18, 214.79, 214.58, 205.78, 186.97,
+                               168.04, 146.76, 133.99, 125.60, 120.88, 118.01, 116.47, 115.88,
+                               112.92, 113.50, 117.78, 123.37, 132.55, 138.14, 138.36, 153.22]
+
+            res_prices = [x['value'] for x in prices]
+
+            assert res_prices == expected_prices

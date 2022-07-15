@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+ZONE_MAP = {
+    'es': 0,  # España
+    'pt': 1   # Portugal
+}
+
 MAJ_HEADER = [
     'Precio',
     '1',

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from datetime import timedelta
-from guess_omie_price.headers import PBC_HEADER
+from guess_omie_price.headers import PBC_HEADER, ZONE_MAP
 from guess_omie_price.utils import LOCAL_TZ, UTC_TZ
 from io import StringIO
 import logging
@@ -8,10 +8,11 @@ import pandas as pd
 import requests
 
 
-def download_pbc_on_date(today):
+def download_pbc_on_date(today, zone='es'):
     """
     Downloads daily market hourly price data from OMIE
     :param today: datetime
+    :param zone: str, must be in ('es', 'pt')
     :return: list of dict
     """
     logger = logging.getLogger('OMIE')
@@ -30,7 +31,8 @@ def download_pbc_on_date(today):
         df = pd.read_csv(io, sep=';', decimal=',', skiprows=[0, 1, 2, -1], encoding='ISO-8859-1',
                          names=PBC_HEADER, index_col=False)
         io.close()
-        values = list(df.iloc[0])
+        index_pos = ZONE_MAP.get(zone)
+        values = list(df.iloc[index_pos])
 
         current_utc_timestamp = today.astimezone(UTC_TZ) + timedelta(hours=1)
         print(current_utc_timestamp)
