@@ -33,6 +33,7 @@ def download_pbc_on_date(today):
         values = list(df.iloc[0])
 
         current_utc_timestamp = today.astimezone(UTC_TZ) + timedelta(hours=1)
+        print(current_utc_timestamp)
 
         res = []
         for val in values[1:]:
@@ -44,8 +45,8 @@ def download_pbc_on_date(today):
             register['value'] = val
 
             res.append(register)
+            current_utc_timestamp += timedelta(hours=1)
 
-        res = sorted(res, key=lambda d: d['utc_timestamp'])
         return res
 
     except IndexError:

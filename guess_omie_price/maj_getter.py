@@ -44,8 +44,8 @@ def download_maj_on_date(today):
             register['value'] = val
 
             res.append(register)
+            current_utc_timestamp += timedelta(hours=1)
 
-        res = sorted(res, key=lambda d: d['utc_timestamp'])
         return res
 
     except IndexError:
