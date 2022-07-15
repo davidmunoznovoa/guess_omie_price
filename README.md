@@ -20,8 +20,10 @@ d = datetime(2022, 4, 13)
 prices = download_pbc_on_date(d)
 
 print(*prices, sep='\n')
+```
 
 # Resultado
+```
 {'local_timestamp': '2022-04-13 01:00:00', 'utc_timestamp': '2022-04-12 23:00:00', 'value': 242.75}
 {'local_timestamp': '2022-04-13 02:00:00', 'utc_timestamp': '2022-04-13 00:00:00', 'value': 229.77}
 {'local_timestamp': '2022-04-13 03:00:00', 'utc_timestamp': '2022-04-13 01:00:00', 'value': 220.0}
@@ -51,15 +53,17 @@ print(*prices, sep='\n')
 - Descargar `Precio horario de ajuste a los consumidores en el mercado`
 
 ```python
-from datetime import datetime, timedelta
+from datetime import datetime
 from guess_omie_price.maj_getter import download_maj_on_date
 
 d = datetime(2022, 6, 15)
 prices = download_maj_on_date(d)
 
 print(*prices, sep='\n')
+```
 
 # Resultado
+```
 {'local_timestamp': '2022-06-15 01:00:00', 'utc_timestamp': '2022-06-14 23:00:00', 'value': 65.22}
 {'local_timestamp': '2022-06-15 02:00:00', 'utc_timestamp': '2022-06-15 00:00:00', 'value': 71.27}
 {'local_timestamp': '2022-06-15 03:00:00', 'utc_timestamp': '2022-06-15 01:00:00', 'value': 75.24}
