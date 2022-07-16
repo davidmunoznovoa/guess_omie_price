@@ -6,7 +6,7 @@ with open('requirements.txt', 'r') as f:
 
 setup(
     name='guess_omie_price',
-    version='1.0.0',
+    version='1.1.1',
     description="Herramienta para tratar de predecir el precio de mercado de OMIE a futuros.",
     author="Helios",
     provides=['guess_omie_price'],
