@@ -2,11 +2,20 @@
 
 :snake: :zap: :moneybag:
 
-![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3-app.yml/badge.svg)
-![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3-app.yml)
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3.10-app.yml/badge.svg)
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3.10-app.yml)
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3.9-app.yml/badge.svg)
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3.9-app.yml)
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3.8-app.yml/badge.svg)
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3.8-app.yml)
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3.7-app.yml/badge.svg)
+![](https://github.com/davidmunoznovoa/guess_omie_price/actions/workflows/python3.7-app.yml)
 
 - Herramienta para tratar de predecir el precio de mercado de OMIE a futuros.
-- También permite descargar distintos ficheros a tener en cuenta para las predicciones.
+- También permite descargar distintos ficheros a tener en cuenta para las predicciones, como por ejemplo los siguientes:
+  - El precio horario del mercado diario desde OMIE.
+  - El precio horario de ajuste a los consumidores en el mercado desde OMIE.
+  - El precio marginal de compra del gas desde MIBGAS.
 
 ## Ejemplos de uso
 
