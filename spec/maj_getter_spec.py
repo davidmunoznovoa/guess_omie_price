@@ -10,21 +10,21 @@ with description('MAJ'):
             prices = download_maj_on_date(d)
             assert len(prices) == 24
 
-            expected_prices = [65.22, 71.27, 75.24, 79.33, 79.33, 80.71, 79.0, 70.84,
-                               61.46, 56.1, 52.13, 48.45, 46.2, 45.5, 44.08, 44.82,
-                               46.32, 48.12, 50.7, 53.55, 55.4, 56.44, 57.79, 64.2]
+            expected_prices = [65.15, 71.2, 75.17, 79.26, 79.26, 80.64, 78.92, 70.75,
+                               61.39, 56.04, 52.07, 48.4, 46.15, 45.45, 44.08, 44.79,
+                               46.28, 48.08, 50.65, 53.53, 55.5, 56.54, 57.69, 64.11]
 
             res_prices = [x['value'] for x in prices]
 
             assert res_prices == expected_prices
 
         with it('Does not fail execution for an invalid datetime'):
-            d = datetime(2022, 6, 14)
+            d = datetime(2022, 5, 14)
             prices = download_maj_on_date(d)
             assert len(prices) == 0
             assert prices == []
 
-            d = datetime(2023, 6, 1)
+            d = datetime(2023, 5, 1)
             prices = download_maj_on_date(d)
             assert len(prices) == 0
             assert prices == []
